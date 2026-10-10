@@ -2,7 +2,7 @@
 // Interrupt (External -Button)
 // Embedded IoT System Fall-2026
 
-// Name:M. AHMAR SAJJAD         Reg#: 1056
+//Muhammad Ahmar Sajjad     //24-NTU-CS-FL-1056
 
 #include<Arduino.h>
 const int buttonPin = 32;

@@ -1,5 +1,6 @@
 
-// Name:M. AHMAR SAJJAD         Reg#: 24-NTU-CS-FL-1056
+
+//Muhammad Ahmar Sajjad  //24-NTU-CS-FL-1056
 
 #include <Arduino.h>
 const int buttonPin = 36;                       // the number of the pushbutton pin

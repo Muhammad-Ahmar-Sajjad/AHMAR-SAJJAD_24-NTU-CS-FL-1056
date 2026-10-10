@@ -2,12 +2,12 @@
 // Timer Interrupt (Internal)
 // Embedded IoT System Fall-2026
 
-// Name:M. AHMAR SAJJAD         Reg#: 24-NTU-CS-FL-1056
+//Muhammad Ahmar Sajjad     //24-NTU-CS-FL-1056
 
 
 #include <Arduino.h>
 
-#define LED 4
+#define LED 2
 
 hw_timer_t *My_timer = NULL;
 
