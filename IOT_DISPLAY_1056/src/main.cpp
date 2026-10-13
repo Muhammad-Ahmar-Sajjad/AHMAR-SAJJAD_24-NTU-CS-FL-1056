@@ -37,7 +37,7 @@ void setup() {
     display.setTextSize(1);
     display.setTextColor(SSD1306_WHITE);
 
-    display.setCursor(0, 0);
+    display.setCursor(0, 0); //127//64
     display.println("ESP32 + OLED");
 
     display.println("PlatformIO Ready!");
@@ -48,6 +48,14 @@ void setup() {
     Serial.println("OLED initialized successfully.");
 }
 
-void loop() {
-    // Add your application code here.
+void loop() 
+{
+    display.clearDisplay();
+    display.setTextSize(1);
+    display.setTextColor(SSD1306_WHITE);
+
+    display.setCursor(0, 0);
+
+    display.println("HELLO IOT");
+    display.display();
 }
