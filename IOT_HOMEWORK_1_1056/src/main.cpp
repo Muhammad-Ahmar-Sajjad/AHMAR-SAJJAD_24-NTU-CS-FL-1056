@@ -30,9 +30,9 @@ void updateDisplay()
 
     display.setTextSize(1);
     display.setCursor(15,0);
-    display.println("1056_ESP32 STATUS");
+    display.println("56-68_ESP32 STATUS");
 
-    display.drawLine(0,12,127,12,SSD1306_WHITE);
+    display.drawLine(0,13,126,13,SSD1306_WHITE);
 
     display.setCursor(0,20);
     display.print("Button: ");
