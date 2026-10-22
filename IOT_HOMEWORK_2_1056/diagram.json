@@ -1,56 +1,34 @@
-
 {
   "version": 1,
   "author": "M. Ahmar Sajjad",
   "editor": "wokwi",
   "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -30, "left": 250, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "led2", "top": 90, "left": 250, "attrs": { "color": "blue" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 20, "left": 160, "attrs": { "value": "330" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 140, "left": 160, "attrs": { "value": "330" } },
     {
-      "type": "board-esp32-devkit-c-v4",
-      "id": "esp",
-      "top": 0,
-      "left": 0,
-      "attrs": {}
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led1",
-      "top": -30,
-      "left": 250,
-      "attrs": { "color": "red" }
-    },
-    {
-      "type": "wokwi-led",
-      "id": "led2",
-      "top": 90,
-      "left": 250,
-      "attrs": { "color": "blue" }
-    },
-    {
-      "type": "wokwi-resistor",
-      "id": "r1",
-      "top": 20,
-      "left": 160,
-      "attrs": { "value": "330" }
-    },
-    {
-      "type": "wokwi-resistor",
-      "id": "r2",
-      "top": 140,
-      "left": 160,
-      "attrs": { "value": "330" }
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 31.94,
+      "left": -134.17,
+      "attrs": { "i2cAddress": "0x3c" }
     }
   ],
   "connections": [
-    ["esp:18", "r1:1", "green", []],
-    ["r1:2", "led1:A", "green", []],
-    ["led1:C", "esp:GND.1", "black", []],
-
-    ["esp:19", "r2:1", "blue", []],
-    ["r2:2", "led2:A", "blue", []],
-    ["led2:C", "esp:GND.2", "black", []],
-
-    ["esp:TX", "$serialMonitor:RX", "", []],
-    ["esp:RX", "$serialMonitor:TX", "", []]
+    [ "esp:18", "r1:1", "green", [] ],
+    [ "r1:2", "led1:A", "green", [] ],
+    [ "led1:C", "esp:GND.1", "black", [] ],
+    [ "esp:19", "r2:1", "blue", [] ],
+    [ "r2:2", "led2:A", "blue", [] ],
+    [ "led2:C", "esp:GND.2", "black", [] ],
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "oled1:GND", "esp:GND.2", "black", [ "v-67.2", "h182.4" ] ],
+    [ "oled1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "oled1:SCL", "esp:22", "green", [ "v-76.8", "h211.5", "v115.2" ] ],
+    [ "oled1:SDA", "esp:21", "green", [ "v-86.4", "h182.47", "v96" ] ]
   ],
   "dependencies": {}
 }
