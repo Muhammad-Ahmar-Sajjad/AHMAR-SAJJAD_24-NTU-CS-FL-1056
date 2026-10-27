@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Nasir Mahmood",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 9.6,
+      "left": 24.04,
+      "attrs": { "env": "micropython-20231227-v1.22.0" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 99.14,
+      "left": 153.83,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 80, "left": -200.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "oled1:SDA", "esp:21", "yellow", [ "v0" ] ],
+    [ "oled1:SCL", "esp:22", "white", [ "v0" ] ],
+    [ "oled1:VCC", "esp:3V3", "red", [ "v-86.4", "h-201.45" ] ],
+    [ "oled1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "ldr1:AO", "esp:34", "green", [ "h48", "v-39.1" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h9.6", "v-9.6" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h9.6", "v-0.4" ] ]
+  ],
+  "dependencies": {}
+}
