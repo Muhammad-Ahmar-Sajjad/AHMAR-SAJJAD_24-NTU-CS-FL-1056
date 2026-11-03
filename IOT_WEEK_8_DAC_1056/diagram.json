@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Nasir",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -67.2, "left": -43.16, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 40,
+      "left": 230,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 102,
+      "left": 253.4,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "esp:25", "r1:1", "green", [ "h-28.65", "v-115.2", "h326.55" ] ],
+    [ "r1:2", "led1:A", "green", [ "h47.85", "v88.4", "h-28.8" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v30.8", "h-381.8", "v-86.4" ] ]
+  ],
+  "dependencies": {}
+}
